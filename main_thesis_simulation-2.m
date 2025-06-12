@@ -1,20 +1,23 @@
 %=======================
-(* # Behavioral Analysis of Confidence Models in 3AFC Tasks
-
-This repository contains MATLAB code for simulating and analyzing behavioral data in a 3-alternative forced-choice (3AFC) task using two models of confidence: the **Posterior Probability Model of Confidence (PPMC)** and the **Magnitude of Evidence Model of Confidence (MEMC)**.
-
-## Overview
-
-The main script, `main_thesis_simulation.m`, simulates trials under different experimental conditions and confidence models. It generates:
-
-- Choice probabilities (`pChoice`)
-- Confidence ratings (`meanConf`)
-- Condition-specific confidence histograms
-- Plots for visual comparison
-- Type 1 and Type 2 cross-entropy losses (CE1 and CE2) to evaluate model fit
-
-This simulation supports model-based analysis of both simulated and real human decision behavior, particularly for confidence judgments.
- *)
+% main_thesis_simulation.m
+%
+% This script simulates behavioral responses in a 3-alternative forced
+% choice (3AFC) task using two confidence models:
+%   - Posterior Probability Model of Confidence (PPMC)
+%   - Magnitude of Evidence Model of Confidence (MEMC)
+%
+% It generates:
+%   • Simulated choice and confidence data across 14 conditions
+%   • Visualizations of choice probabilities and confidence by condition
+%   • Confidence histograms conditioned on choice
+%   • Type 1 (CE1) and Type 2 (CE2) cross-entropy losses to quantify fit
+%
+% Outputs are useful for evaluating model performance against human data
+% or other simulated agents.
+%
+% Author: Tulika Basu
+% Institution:  University of California, Irvine & CNC Lab, Dept. of Cognitive Sciences, School of Social Sciences
+% Date: June 5, 2025
 %=======================
 function main_thesis_simulation()
     clc; close all; clear;
