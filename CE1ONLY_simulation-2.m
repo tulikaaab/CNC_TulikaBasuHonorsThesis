@@ -1,5 +1,5 @@
 %==========================================================================
-% sigmascaleSTAR_2.m
+% CE1ONLY_simulation-2.m
 %
 % This script fits the sensory noise parameter (sigma) by minimizing
 % cross-entropy loss between simulated ground-truth choice behavior and
