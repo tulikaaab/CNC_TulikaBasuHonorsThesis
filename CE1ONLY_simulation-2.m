@@ -1,7 +1,24 @@
-%=======================
-% MODEL FITTING SCRIPT (CE1 only, with confidenceType confirmation)
-%=======================
-function sigmascaleSTAR_2()
+%==========================================================================
+% sigmascaleSTAR_2.m
+%
+% This script fits the sensory noise parameter (sigma) by minimizing
+% cross-entropy loss between simulated ground-truth choice behavior and
+% model-predicted choices (Type 1 CE only).
+%
+% For each subject, it:
+%   • Simulates behavior using a known sigma (true_sigma)
+%   • Iteratively tests a range of sigma values to identify the one
+%     that minimizes CE1
+%   • Outputs recovered sigma values and visualizes CE1 curves
+%
+% This is used for evaluating how well the model can recover internal noise
+% levels in confidence-based decision-making using only choice data.
+%
+% Author: Tulika Basu
+% Institution: University of California, Irvine & CNC Lab, Dept. of Cognitive Sciences, School of Social Sciences
+% Date: June 5, 2025
+%==========================================================================
+function CE1ONLY_simulation()
     clc; close all;
     fignums = [10 11 12; 13 14 15];
     sigmaScaleRange = 0.05:0.05:10;
