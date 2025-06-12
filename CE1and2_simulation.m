@@ -1,3 +1,28 @@
+%==========================================================================
+% CE1and2_simulation.m
+%
+% This script evaluates how well confidence models recover the true 
+% sensory noise (sigma) parameter used to generate synthetic behavioral 
+% data in a 3-alternative forced choice (3AFC) task.
+%
+% It simulates subject behavior under known conditions, then performs a 
+% grid search over sigma values to identify the best-fitting sigma using:
+%   - CE1: Cross-entropy loss between model-predicted and ground-truth choices
+%   - CE2: Cross-entropy loss between model-predicted and ground-truth 
+%          confidence distributions
+%
+% Outputs include:
+%   • Subject-level sigma recovery plots
+%   • Summary statistics for recovered sigma, CE1, and CE2
+%
+% This analysis helps validate the robustness of the PPMC and MEMC models 
+% in capturing both choice and confidence behavior.
+%
+% Author: Tulika Basu
+% Institution: University of California, Irvine & CNC Lab, Dept. of Cognitive Sciences, School of Social Sciences
+% Date: June 5, 2025
+%==========================================================================
+
 function CE1and2_simulation()
     clc; close all;
     fignums = [10 11 12; 13 14 15];
